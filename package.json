@@ -10,9 +10,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/netinfo": "^5.9.4",
+    "amazon-cognito-identity-js": "^4.3.2",
+    "aws-amplify": "^3.0.18",
+    "aws-amplify-react-native": "^4.2.1",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-navigation": "^6.8.0"
+    "react-native-elements": "^2.0.4",
+    "react-native-loading-spinner-overlay": "^1.1.0",
+    "react-native-navigation": "^6.8.0",
+    "react-native-root-toast": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -20,6 +27,7 @@
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
+    "flow-bin": "0.113",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.58.0",
     "react-test-renderer": "16.11.0"

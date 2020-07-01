@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"tiktokclone1bb21eda": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
