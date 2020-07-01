@@ -155,7 +155,7 @@ const Authentication = ({componentId}: AuthenticationProps) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{marginBottom: 50}}>Welcome to TikTokClone!</Text>
+      <Text style={styles.textLinks}>Welcome to TikTokClone!</Text>
       <Input
         label="Email"
         placeholder="my@email.com"
@@ -175,18 +175,18 @@ const Authentication = ({componentId}: AuthenticationProps) => {
           secureTextEntry
         />
       )}
-      <TouchableOpacity onPress={() => setFPModalVisible(true)}>
-        <Text style={{color: 'red', marginVertical: 30, fontSize: 18}}>
-          Forgot password?
-        </Text>
-      </TouchableOpacity>
+      {showLogin && (
+        <TouchableOpacity onPress={() => setFPModalVisible(true)}>
+          <Text style={styles.textLinks}>Forgot password?</Text>
+        </TouchableOpacity>
+      )}
       <Button
         title={showLogin ? 'Login' : 'Signup'}
         onPress={showLogin ? handleSignIn : handleSignUp}
       />
       <TouchableOpacity
         onPress={() => setShowLogin(prevShowLogin => !prevShowLogin)}>
-        <Text style={{color: 'red', marginTop: 30, fontSize: 20}}>
+        <Text style={styles.textLinks}>
           {showLogin ? 'Signup' : 'Login'} Instead?
         </Text>
       </TouchableOpacity>
@@ -204,9 +204,7 @@ const Authentication = ({componentId}: AuthenticationProps) => {
             }}
           />
           <TouchableOpacity onPress={handleResend}>
-            <Text style={{color: '#333333', marginVertical: 20}}>
-              Resend OTP
-            </Text>
+            <Text style={styles.textLinks}>Resend OTP</Text>
           </TouchableOpacity>
           <Button title="Submit" onPress={handleConfirmationCode} />
         </View>

@@ -7,6 +7,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textLinks: {
+    color: 'red',
+    marginVertical: 30,
+    fontSize: 18,
+  },
 });
 
 export default styles;
