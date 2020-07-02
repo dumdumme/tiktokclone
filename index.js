@@ -16,17 +16,35 @@ Navigation.registerComponent('Authentication', () => Authentication);
 Navigation.registerComponent('Home', () => Home);
 
 Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setRoot({
-    root: {
-      stack: {
-        children: [
-          {
-            component: {
-              name: 'Authentication',
-            },
+  Auth.currentSession()
+    .then(session =>
+      Navigation.setRoot({
+        root: {
+          stack: {
+            children: [
+              {
+                component: {
+                  name: 'Home',
+                },
+              },
+            ],
           },
-        ],
-      },
-    },
-  });
+        },
+      }),
+    )
+    .catch(error =>
+      Navigation.setRoot({
+        root: {
+          stack: {
+            children: [
+              {
+                component: {
+                  name: 'Authentication',
+                },
+              },
+            ],
+          },
+        },
+      }),
+    );
 });
